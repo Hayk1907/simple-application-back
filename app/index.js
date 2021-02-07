@@ -6,10 +6,9 @@ const cookieParser = require('cookie-parser');
 const {ApiError} = require('./helpers/errors');
 
 const api = require('./api');
-// TODO: init db
-// const auth = require('./middlewares/auth')
+require('./db');
 const CORS = require('./middlewares/cors');
-const env = process.env.NODE_ENV || 'dev';
+const env = process.env.NODE_ENV || 'development';
 
 const app = express();
 
